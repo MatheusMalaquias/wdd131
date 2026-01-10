@@ -41,11 +41,16 @@ body {
     font-weight: 700;
 }
 
+header {
+    width: 100%;
+}
+
 /* ==========================
    Navigation (Flex)
    ========================== */
 nav {
     background-color: var(--dark-gray);
+    color: var(--white);
 }
 
 nav ul {
