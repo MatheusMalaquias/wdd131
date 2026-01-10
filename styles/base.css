@@ -1,0 +1,161 @@
+/* ==========================
+   Variables
+   ========================== */
+:root {
+    --blue: #1f4e6f;
+    --dark-gray: #2f2f2f;
+    --light-gray: #f4f4f4;
+    --border-gray: #cccccc;
+    --white: #ffffff;
+    --text-dark: #222222;
+}
+
+/* ==========================
+   Reset
+   ========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ==========================
+   Body
+   ========================== */
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--light-gray);
+    color: var(--text-dark);
+}
+
+/* ==========================
+   Header
+   ========================== */
+#course-title {
+    display: block;
+    background-color: var(--blue);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/* ==========================
+   Navigation (Flex)
+   ========================== */
+nav {
+    background-color: var(--dark-gray);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+nav a {
+    display: block;
+    padding: 1rem 2rem;
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: var(--blue);
+}
+
+/* ==========================
+   Main Layout (Grid)
+   ========================== */
+main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+main h1 {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+/* ==========================
+   Cards
+   ========================== */
+.card {
+    background-color: var(--white);
+    border: 1px solid var(--border-gray);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card h2 {
+    background-color: var(--blue);
+    color: var(--white);
+    text-align: center;
+    padding: 0.75rem;
+    font-size: 1.3rem;
+}
+
+.card p {
+    padding: 1.5rem;
+    line-height: 1.6;
+}
+
+/* ==========================
+   About Me Layout
+   ========================== */
+.about-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+.about-content p {
+    padding: 0;
+}
+
+.about-content img {
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+/* ==========================
+   Footer
+   ========================== */
+footer {
+    background-color: var(--blue);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+}
+
+/* ==========================
+   Responsive
+   ========================== */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}

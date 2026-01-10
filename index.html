@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WDD 131 – Dynamic Web Fundamentals – Matheus Otávio Malaquias</title>
+
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals. Matheus Otávio Malaquias. HTML, CSS, JavaScript, Web Development.">
+    <meta name="author" content="Matheus Otávio Malaquias">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/base.css">
+</head>
+
+<body>
+    <header>
+        <span id="course-title">WDD 131: Dynamic Web Fundamentals</span>
+
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/matheus-malaquias-a92477281/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/" target="_blank">I-Learn</a></li>
+                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/moro/9?lang=eng&id=p6#p6" target="_blank">Scripture</a></li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Matheus Otávio Malaquias</h1>
+
+        <!-- About Me -->
+        <section class="card about">
+            <h2>About Me</h2>
+
+            <div class="about-content">
+                <p>
+                    My name is Matheus Otávio Malaquias. I'm currently studying Software
+                    Development at Brigham Young University - Idaho (BYU-I). I've always been
+                    curious about how technology transforms the world, and that curiosity
+                    led me to programming.</p>
+
+                <img src="./images/Matheus Malaquias.jpg" alt="Photo of Matheus Malaquias">
+            </div>
+        </section>
+
+        <!-- Location -->
+        <section class="card">
+            <h2>Web Dev Resources</h2>
+            <p>I'm from Brazil.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="currentyear">2026 |</span>
+            Matheus Otávio Malaquias | Brazil
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script>
+        document.getElementById("currentyear").textContent =
+            new Date().getFullYear();
+
+        document.getElementById("lastModified").textContent =
+            "Last Modification: " + document.lastModified;
+    </script>
+</body>
+</html>
