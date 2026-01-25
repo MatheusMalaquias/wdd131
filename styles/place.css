@@ -1,0 +1,68 @@
+:root {
+  --primary-color: #3f85c7;
+  --secondary-color: #3f85c7;
+  --text-color: #002776;
+  --background: #f5f5f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: var(--background);
+  color: var(--text-color);
+}
+
+header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
+main {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.card {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.weather-icon {
+  width: 50px;
+}
+
+/* WIDER VIEW */
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Esconde SVG no desktop */
+  .weather-icon {
+    display: none;
+  }
+
+  /* Pseudo-element com emoticon */
+  .weather h2::after {
+    content: " ⛅";
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--secondary-color);
+}
