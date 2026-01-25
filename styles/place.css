@@ -1,8 +1,8 @@
 :root {
-  --primary-color: #3f85c7;
-  --secondary-color: #3f85c7;
-  --text-color: #002776;
-  --background: #f5f5f5;
+  --primary-color: #009739;
+  --secondary-color: #ffdf00;
+  --accent-color: #002776;
+  --card-bg: rgba(255, 255, 255, 0.9);
 }
 
 * {
@@ -10,59 +10,87 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  background-color: var(--background);
-  color: var(--text-color);
+  font-family: "Roboto", sans-serif;
+  color: var(--accent-color);
 }
 
 header {
   background-color: var(--primary-color);
   color: white;
-  padding: 1rem;
   text-align: center;
-}
-
-.hero img {
-  width: 100%;
-  height: auto;
+  padding: 1rem;
 }
 
 main {
-  display: grid;
-  gap: 1rem;
-  padding: 1rem;
+  position: relative;
 }
 
+/* Hero Image */
+.hero img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Cards */
 .card {
-  background: white;
+  background-color: var(--card-bg);
   padding: 1rem;
   border-radius: 8px;
+  max-width: 300px;
 }
 
+/* Mobile layout */
+.data,
+.weather {
+  margin: 1rem auto;
+}
+
+/* Weather icon visible on mobile */
 .weather-icon {
   width: 50px;
+  display: block;
+  margin-bottom: 0.5rem;
 }
 
-/* WIDER VIEW */
+/* Desktop layout */
 @media (min-width: 768px) {
-  main {
-    grid-template-columns: 1fr 1fr;
+  .data {
+    position: absolute;
+    top: 20%;
+    left: 5%;
   }
 
-  /* Esconde SVG no desktop */
+  .weather {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+  }
+
+  /* Hide SVG icon on large screens */
   .weather-icon {
     display: none;
   }
 
-  /* Pseudo-element com emoticon */
+  /* Emoji icon using pseudo-element */
   .weather h2::after {
     content: " ⛅";
   }
 }
 
 footer {
+  background-color: var(--secondary-color);
   text-align: center;
   padding: 1rem;
-  background-color: var(--secondary-color);
+  font-size: 0.9rem;
+}
+
+.card h2 {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem;
+  margin: -1rem -1rem 1rem -1rem;
+  border-radius: 8px 8px 0 0;
+  text-align: left;
 }
