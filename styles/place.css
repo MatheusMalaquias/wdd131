@@ -94,3 +94,10 @@ footer {
   border-radius: 8px 8px 0 0;
   text-align: left;
 }
+
+.weather-icon {
+  width: 48px;
+  height: auto;
+  display: block;
+  margin: 0.5rem auto;
+}
