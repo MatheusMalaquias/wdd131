@@ -2,81 +2,80 @@
   --primary-color: #009739;
   --secondary-color: #ffdf00;
   --accent-color: #002776;
-  --card-bg: rgba(255, 255, 255, 0.9);
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --font-main: "Roboto", sans-serif;
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-main);
   color: var(--accent-color);
+  background-color: white;
+  line-height: 1.5;
 }
 
 header {
   background-color: var(--primary-color);
   color: white;
   text-align: center;
-  padding: 1rem;
+  padding: 1.25rem;
+}
+
+header h1 {
+  font-size: 2rem;
 }
 
 main {
-  position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Hero Image */
 .hero img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* Cards */
 .card {
   background-color: var(--card-bg);
+  margin: 1rem;
   padding: 1rem;
   border-radius: 8px;
-  max-width: 300px;
 }
 
-/* Mobile layout */
-.data,
-.weather {
-  margin: 1rem auto;
+/* Card titles */
+.card h2 {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.5rem;
+  margin: -1rem -1rem 1rem -1rem;
+  border-radius: 8px 8px 0 0;
+  font-size: 1.25rem;
 }
 
-/* Weather icon visible on mobile */
+.data ul {
+  list-style: none;
+}
+
+.data li {
+  margin-bottom: 0.4rem;
+}
+
+.weather p {
+  margin-bottom: 0.4rem;
+}
+
+/* SVG weather icon (mobile only) */
 .weather-icon {
-  width: 50px;
+  width: 48px;
+  height: auto;
   display: block;
-  margin-bottom: 0.5rem;
-}
-
-/* Desktop layout */
-@media (min-width: 768px) {
-  .data {
-    position: absolute;
-    top: 20%;
-    left: 5%;
-  }
-
-  .weather {
-    position: absolute;
-    top: 20%;
-    right: 5%;
-  }
-
-  /* Hide SVG icon on large screens */
-  .weather-icon {
-    display: none;
-  }
-
-  /* Emoji icon using pseudo-element */
-  .weather h2::after {
-    content: " ⛅";
-  }
+  margin: 0.5rem auto;
 }
 
 footer {
@@ -86,18 +85,37 @@ footer {
   font-size: 0.9rem;
 }
 
-.card h2 {
-  background-color: var(--primary-color);
-  color: white;
-  padding: 0.5rem;
-  margin: -1rem -1rem 1rem -1rem;
-  border-radius: 8px 8px 0 0;
-  text-align: left;
+footer p {
+  margin: 0.3rem 0;
 }
 
-.weather-icon {
-  width: 48px;
-  height: auto;
-  display: block;
-  margin: 0.5rem auto;
+@media (min-width: 768px) {
+  main {
+    position: relative;
+  }
+
+  .card {
+    position: absolute;
+    max-width: 300px;
+  }
+
+  .data {
+    top: 25%;
+    left: 5%;
+  }
+
+  .weather {
+    top: 25%;
+    right: 5%;
+  }
+
+  /* Hide SVG icon on large screens */
+  .weather-icon {
+    display: none;
+  }
+
+  /* Emoji for desktop title */
+  .weather h2::after {
+    content: " ⛅";
+  }
 }
