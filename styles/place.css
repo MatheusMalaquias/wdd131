@@ -109,11 +109,6 @@ footer p {
     right: 5%;
   }
 
-  /* Hide SVG icon on large screens */
-  .weather-icon {
-    display: none;
-  }
-
   /* Emoji for desktop title */
   .weather h2::after {
     content: " ⛅";
