@@ -118,3 +118,31 @@ footer {
 footer p {
   margin: 0.3rem 0;
 }
+
+@media (min-width: 768px) {
+  nav {
+    justify-content: space-between;
+  }
+
+  #menu-button {
+    display: none;
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: auto;
+  }
+
+  .navigation li {
+    margin: 0 0.5rem;
+  }
+
+  .gallery,
+  #temples-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
