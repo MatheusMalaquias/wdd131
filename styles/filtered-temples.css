@@ -36,10 +36,9 @@ nav {
 }
 
 #menu-button {
+  font-size: 1.8rem;
   background: none;
   border: none;
-  color: #fff;
-  font-size: 1.8rem;
   cursor: pointer;
 }
 
@@ -47,8 +46,8 @@ nav {
   list-style: none;
   display: none;
   flex-direction: column;
-  width: 100%;
-  margin-top: 0.5rem;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 .navigation.open {
@@ -86,8 +85,8 @@ main h1 {
 
 .gallery {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
 }
 
 figure {
