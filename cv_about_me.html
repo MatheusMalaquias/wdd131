@@ -5,41 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-lang="pt">Sobre mim - Matheus O. Malaquias</title>
   <title data-lang="en" style="display:none;">About me - Matheus O. Malaquias</title>
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-  <link rel="stylesheet" href="./Styles/CV.css">
-
-  <style>
-    /* Centralizar o seletor de idioma */
-    .language-switch {
-      text-align: center;
-      margin-top: 10px;
-    }
-
-    .language-switch button {
-      background: none;
-      border: 1px solid #ccc;
-      margin: 0 5px;
-      padding: 6px 12px;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.3s;
-      font-weight: 600;
-      color: white;
-    }
-
-    .language-switch button:hover {
-      background-color: #eee;
-    }
-  </style>
+  <link rel="stylesheet" href="./styles/cv.css">
+  <script src="./scripts/language.js"></script>
+  <script src="scripts/theme.js"></script>
 </head>
 <body>
-  <!-- Header -->
+  
   <header>
     <img src="./images/malaquias.png" alt="Matheus O. Malaquias">
     <h1>Matheus O. Malaquias</h1>
 
-    <!-- Seletor de idioma -->
+    
     <div class="language-switch">
       <button onclick="setLanguage('pt')">🇧🇷 PT</button>
       <button onclick="setLanguage('en')">🇺🇸 EN</button>
@@ -47,7 +24,7 @@
 
     <br>
 
-    <!-- Menu de navegação -->
+    
     <nav class="header__navbar">
       <a href="cv.html" data-lang="pt">CV</a>
       <a href="cv.html" data-lang="en" style="display:none;">Resume</a>
@@ -60,7 +37,7 @@
     </nav>
   </header>
 
-  <!-- Seção principal -->
+  
   <section class="about-main">
     <h2 data-lang="pt">Quem sou eu?</h2>
     <h2 data-lang="en" style="display:none;">Who am I?</h2>
@@ -108,9 +85,9 @@
     </p>
   </section>
 
-  <!-- Rodapé -->
+  
   <footer class="site-footer">
-    <!-- Linguagens -->
+    
     <div class="tech-footer">
       <div class="tech-icons">
         <i class="devicon-python-plain colored"></i>
@@ -157,12 +134,8 @@
       </a>
     </div>
   </footer>
-
-  <!-- Script de idioma -->
-  <script src="./Scripts/language.js"></script>
-
-  <!-- Botão de modo claro/escuro -->
+  
   <button id="theme-toggle" class="theme-toggle">🌙</button>
-  <script src="Scripts/Theme.js"></script>
+  
 </body>
 </html>

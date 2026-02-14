@@ -4,42 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projetos - Matheus O. Malaquias</title>
-
-  <!-- Ícones das linguagens -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-  <link rel="stylesheet" href="./Styles/Projects.css">
-
-  <style>
-    /* Centralizar o seletor de idioma */
-    .language-switch {
-      text-align: center;
-      margin-top: 10px;
-    }
-
-    .language-switch button {
-      background: none;
-      border: 1px solid #ccc;
-      margin: 0 5px;
-      padding: 6px 12px;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.3s;
-      font-weight: 600;
-      color: white;
-    }
-
-    .language-switch button:hover {
-      background-color: #eee;
-    }
-  </style>
+  <link rel="stylesheet" href="./styles/projects.css">
+  <script src="./scripts/theme.js"></script>
+  <script src="./scripts/language.js"></script>
 </head>
 <body>
-  <!-- Header -->
+  
   <header>
-    <img src="./Images/Malaquias.png" alt="Matheus O. Malaquias">
+    <img src="./images/malaquias.png" alt="Matheus O. Malaquias">
     <h1>Matheus O. Malaquias</h1>
 
-    <!-- Seletor de idioma -->
+    
     <div class="language-switch">
       <button onclick="setLanguage('pt')">🇧🇷 PT</button>
       <button onclick="setLanguage('en')">🇺🇸 EN</button>
@@ -47,19 +23,19 @@
 
     <br>
 
-    <nav class="header__navbar">
-      <a href="CV.html" data-lang="pt">CV</a>
-      <a href="CV.html" data-lang="en" style="display:none;">Resume</a>
+     <nav class="header__navbar">
+      <a href="cv.html" data-lang="pt">CV</a>
+      <a href="cv.html" data-lang="en" style="display:none;">Resume</a>
 
-      <a href="CVAboutMe.html" data-lang="pt">Sobre mim</a>
-      <a href="CVAboutMe.html" data-lang="en" style="display:none;">About me</a>
+      <a href="cv_about_me.html" data-lang="pt">Sobre mim</a>
+      <a href="cv_about_me.html" data-lang="en" style="display:none;">About me</a>
 
-      <a href="CVProjects.html" data-lang="pt">Projetos</a>
-      <a href="CVProjects.html" data-lang="en" style="display:none;">Projects</a>
+      <a href="cv_projects.html" data-lang="pt">Projetos</a>
+      <a href="cv_projects.html" data-lang="en" style="display:none;">Projects</a>
     </nav>
   </header>
 
-  <!-- Hero Section -->
+  
   <section class="hero">
     <h1 data-lang="pt">Transformando ideias em soluções digitais</h1>
     <h1 data-lang="en" style="display:none;">Transforming ideas into digital solutions</h1>
@@ -72,11 +48,11 @@
     </p>
   </section>
 
-  <!-- Projetos -->
+  
   <section id="projetos">
     <div class="projetos-grid">
 
-      <!-- Projeto 1 -->
+      
       <div class="card">
         <div class="carousel">
           <div class="slides">
@@ -99,7 +75,7 @@
         <a href="https://github.com/MatheusMalaquias/College-Projects/tree/main/WDD130/WWR" target="_blank" data-lang="en" style="display:none;">Code</a>
       </div>
 
-      <!-- Projeto 2 -->
+      
       <div class="card">
         <div class="carousel">
           <div class="slides">
@@ -122,7 +98,7 @@
         <a href="https://github.com/MatheusMalaquias/College-Projects/tree/main/MyThings/English" target="_blank" data-lang="en" style="display:none;">Code</a>
       </div>
 
-      <!-- Projeto 3 -->
+      
       <div class="card">
         <div class="carousel">
           <div class="slides">
@@ -147,9 +123,9 @@
     </div>
   </section>
 
-  <!-- Rodapé -->
+  
   <footer class="site-footer">
-    <!-- Linguagens -->
+    
     <div class="tech-footer">
       <div class="tech-icons">
         <i class="devicon-python-plain colored"></i>
@@ -197,12 +173,7 @@
     </div>
   </footer>
 
-  <!-- Script de idioma -->
-  <script src="./scripts/language.js"></script>
-
-  <!-- Botão de modo claro/escuro -->
   <button id="theme-toggle" class="theme-toggle">🌙</button>
-  <script src="./scripts/theme.js"></script>
   
 </body>
 </html>
